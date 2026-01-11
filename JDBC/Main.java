@@ -1,4 +1,5 @@
 package JDBC;
+
 // Step 1: Import javas.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
