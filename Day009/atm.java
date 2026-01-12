@@ -244,8 +244,8 @@ class option_menu extends account {
 public class atm extends account {
     public static void main(String[] args) {
         option_menu op = new option_menu();
-        // op.getlogin();
-        op.getAccountType();
+        op.getlogin();
+        // op.getAccountType();
 
     }
 }
