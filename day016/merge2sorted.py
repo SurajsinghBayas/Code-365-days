@@ -1,20 +1,19 @@
 class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        dummy = ListNode(0)
-        tail = dummy
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        i = m - 1
+        j = n - 1
+        k = m + n - 1
 
-        while list1 and list2:
-            if list1.val < list2.val:
-                tail.next = list1
-                list1 = list1.next
+        while i >= 0 and j >= 0:
+            if nums1[i] > nums2[j]:
+                nums1[k] = nums1[i]
+                i -= 1
             else:
-                tail.next = list2
-                list2 = list2.next
-            tail = tail.next
+                nums1[k] = nums2[j]
+                j -= 1
+            k -= 1
 
-        if list1:
-            tail.next = list1
-        else:
-            tail.next = list2
-
-        return dummy.next
+        while j >= 0:
+            nums1[k] = nums2[j]
+            j -= 1
+            k -= 1
