@@ -1,4 +1,5 @@
 class Solution:
+    # Trionic Array
     def isTrionic(self, nums: List[int]) -> bool:
         n = len(nums)
         if n < 4:
